@@ -790,7 +790,7 @@ p {
 
 /* ===== About CSS ===== */
 .ud-about {
-  background: #f3f4fe;
+  background: var(--body-color);
   padding: 120px 0;
 }
 
@@ -801,8 +801,9 @@ p {
 }
 
 .ud-about-wrapper {
-  background: var(--white);
+  background: #000;
   border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,6 +836,7 @@ p {
 
 .ud-about-content {
   max-width: 500px;
+  color: white;
 }
 
 .ud-about-content .tag {
@@ -865,6 +867,7 @@ p {
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 40px;
+  color: white;
 }
 
 .ud-about-content .ud-main-btn:hover {
@@ -1101,6 +1104,7 @@ p {
 /* ===== Testimonials CSS ===== */
 .ud-testimonials {
   padding-top: 120px;
+  background-color: var(--body-color);
 }
 
 @media (max-width: 767px) {
@@ -1111,10 +1115,11 @@ p {
 
 .ud-single-testimonial {
   padding: 30px;
-  -webkit-box-shadow: 0px 60px 120px -20px #ebeffd;
-          box-shadow: 0px 60px 120px -20px #ebeffd;
-  background: var(--white);
+  -webkit-box-shadow: 0px 60px 120px -20px #1dc5f51a;
+          box-shadow: 0px 60px 120px -20px #1dc5f51a;
+  background: #000;
   margin-bottom: 50px;
+  border-radius: 30px;
 }
 
 .ud-single-testimonial .ud-testimonial-ratings {
@@ -1218,12 +1223,14 @@ p {
 .ud-team {
   padding-top: 120px;
   padding-bottom: 80px;
+  background-color: var(--body-color);
 }
 
 @media (max-width: 767px) {
   .ud-team {
     padding-top: 80px;
     padding-bottom: 40px;
+      background-color: var(--body-color);
   }
 }
 
@@ -1316,6 +1323,7 @@ p {
 .ud-contact {
   padding: 120px 0px;
   position: relative;
+  background-color: var(--body-color);
 }
 
 @media (max-width: 767px) {
@@ -1405,6 +1413,7 @@ p {
 .ud-contact-info-wrapper .ud-info-meta p {
   font-size: 15px;
   line-height: 24px;
+  color: white;
 }
 
 .ud-contact-form-wrapper {
@@ -1468,7 +1477,7 @@ p {
 
 /* ===== Footer CSS ===== */
 .ud-footer {
-  background: var(--heading-color);
+  background: var(--body-color);
   padding-top: 100px;
   position: relative;
   z-index: 1;
