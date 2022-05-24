@@ -1,10 +1,13 @@
 <!-- =========
 
-	Template Name: Play
-	Author: UIdeck
-	Author URI: https://uideck.com/
-	Support: https://uideck.com/support/
-	Version: 1.1
+    ____             __    ____ __           
+   F ___J    _   _   LJ   / ___JLJ   _    _  
+  J |___:   J \ / F      J |_--'FJ  J |  | L 
+  | _____|   \ ' /   FJ  |  _| J  L | |  | | 
+  F L____:  .' . `. J  L F |_J J  L F L__J J 
+ J________LJ__/:\__LJ__LJ__F   J__L )-____  L
+ |________||__/ \__||__||__|   |__|J\______/F
+                                    J______F 
 
 ========== -->
 
@@ -47,7 +50,6 @@
     <link rel="stylesheet" href="assets/css/lineicons.css" />
     <link rel="stylesheet" href="assets/css/ud-styles.css" />
   </head>
-  <script src="./firebase.js"></script>
   <body>
     <!-- ====== Header Start ====== -->
     <header class="ud-header">
@@ -195,9 +197,9 @@
                 <i class="lni lni-move"></i>
               </div>
               <div class="ud-feature-content">
-                <h3 class="ud-feature-title">Multipurpose Template</h3>
+                <h3 class="ud-feature-title">Team Multiuso</h3>
                 <p class="ud-feature-desc">
-                  Lorem Ipsum is simply dummy text of the printing and industry.
+                  I nostri esperti saranno in grado di trovare la soluzione piu' adatta a te!
                 </p>
                 <a href="javascript:void(0)" class="ud-feature-link">
                   Learn More
@@ -705,7 +707,7 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-3 col-lg-3 col-sm-6">
+          <!-- <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-team wow fadeInUp" data-wow-delay=".1s">
               <div class="ud-team-image-wrapper">
                 <div class="ud-team-image">
@@ -745,12 +747,12 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
           <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-team wow fadeInUp" data-wow-delay=".15s">
               <div class="ud-team-image-wrapper">
                 <div class="ud-team-image">
-                  <img src="assets/images/team/team-02.png" alt="team" />
+                  <img src="assets/images/team/gd.jpeg" alt="team" />
                 </div>
 
                 <img
@@ -786,7 +788,7 @@
             <div class="ud-single-team wow fadeInUp" data-wow-delay=".2s">
               <div class="ud-team-image-wrapper">
                 <div class="ud-team-image">
-                  <img src="assets/images/team/team-03.png" alt="team" />
+                  <img src="assets/images/team/fa.jpeg" alt="team" />
                 </div>
 
                 <img
@@ -818,7 +820,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-sm-6">
+          <!-- <div class="col-xl-3 col-lg-3 col-sm-6">
             <div class="ud-single-team wow fadeInUp" data-wow-delay=".25s">
               <div class="ud-team-image-wrapper">
                 <div class="ud-team-image">
@@ -858,7 +860,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -905,7 +907,7 @@
               data-wow-delay=".2s"
             >
               <h3 class="ud-contact-form-title">Inviaci un Messaggio</h3>
-              <form class="ud-contact-form">
+              <form class="ud-contact-form" method="get">
                 <div class="ud-form-group">
                   <label for="fullName">Nome*</label>
                   <input
@@ -1194,6 +1196,29 @@
     <!-- ====== Back To Top End ====== -->
 
     <!-- ====== All Javascript Files ====== -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC4HLw4dM-nVyrcaNl9qmdPXLscVZmzjq8",
+        authDomain: "exyweb-83e88.firebaseapp.com",
+        projectId: "exyweb-83e88",
+        storageBucket: "exyweb-83e88.appspot.com",
+        messagingSenderId: "386399370400",
+        appId: "1:386399370400:web:4bdd91e1c3b7ad2dc2ddc5",
+        measurementId: "G-3XLYN1JXEN"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
