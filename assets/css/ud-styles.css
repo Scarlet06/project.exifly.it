@@ -2624,4 +2624,112 @@ p {
     padding: 10px 20px;
   }
 }
-/*# sourceMappingURL=ud-styles.css.map */
+
+.ipad-pro-portrait {
+  height: 532px;
+  width: 738px;
+  background: #000000;
+  margin: 30px auto;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,1);
+}
+
+@media (max-width: 767px) {
+.ipad-pro-portrait {
+  height: 335px;
+  width: 456px;
+  background: #000000;
+  margin: 30px auto;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,1);
+}
+}
+
+.bezel {
+  background-image: url("../assets/images/projects/condominio2.webp");
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 97%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  background-image: url("../assets/images/projects/condominio2.webp");
+  }
+}
+
+.casing {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background: #000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border: 1px solid #cdcdcf;
+  border-radius: 22px;
+}
+
+.camera {
+  height: 8px;
+  width: 8px;
+  background: #11153a;
+  border-radius: 50%;
+  position: absolute;
+  left: 3.4%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #0a0e33;
+}
+
+
+.screen {
+  position: absolute;
+  height: 90%;
+  width: 92%;
+  // background: grey;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  background-size: cover;
+  background-image: url("../../assets/images/projects/condominio2.webp");
+}
+
+.screen1 {
+  position: absolute;
+  height: 90%;
+  width: 92%;
+  // background: grey;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  background-size: cover;
+  background-image: url("../../assets/images/projects/tweetyfly.webp");
+}
