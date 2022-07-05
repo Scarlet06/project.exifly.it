@@ -146,7 +146,7 @@
               </h5>
               <ul class="ud-hero-buttons">
                 <li>
-                  <a align="center" href="#about" class="ud-main-btn ud-menu-scroll" style="position: relative;">
+                  <a align="center" href="#about" class="ud-main-btn" style="position: relative;">
                     Informazioni <i class="lni lni-arrow-right"></i>
                   </a>
                 </li>
@@ -195,7 +195,7 @@
           <div class="col-lg-12">
             <div class="ud-section-title mx-auto text-center">
               <span class="gradient">Features</span>
-              <h2 class="ud-hero-desc text-white">Le nostre specialità</h2>
+              <h2 class="ud-hero-desc text-white" style="position: relative;">Le nostre specialità</h2>
               <p>
                 In basso troverai le nostre specialità, partendo da piattaforme Open-Source fino alle Platform As a Service! (PaaS)
               </p>
@@ -309,7 +309,35 @@
           </div>
         </section>
         <!-- ====== About End ====== -->
-        
+    
+    <!-- ====== Collaboratori ====== -->
+    <!--
+    <section id="collaboratori">
+    <div class="section section-sm py-0">
+      <div class="container">
+          <div class="row text-center mb-5">
+              <div class="col">
+                  <h2 class="h6 font-weight-bold text-brown">We're proudly featured by</h2>
+              </div>
+          </div>
+          <div class="row text-center">
+              <div class="col d-flex justify-content-center flex-wrap">
+                  <a 
+                  href="#" 
+                  aria-label="Stripe brand logo" 
+                  class="icon icon-xl icon-dark mr-4 mr-sm-5" 
+                  data-toggle="tooltip" 
+                  data-placement="top" 
+                  title="" 
+                  data-original-title="Stripe">
+                  <span class="fab fa-stripe" data-original-title="" title=""></span>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
     <!-- ====== Project Start ====== -->
     <section id="progetti">
       <div class="row">
@@ -333,27 +361,27 @@
             </div>
             <div align="center" class="carousel-inner">
               <div class="carousel-item active">
-              <div class="ipad-pro-portrait">
-                <div class="bezel"></div>
-                <div class="casing"></div>
-                <div class="camera"></div>
-                <div class="home-btn"></div>
-                <div class="screen"></div>
-              </div>
-              <div class="col-lg-12">
-                <div class="ud-about-content-wrapper">
-                  <div class="ud-about-content">
-                    <span class="tag">Gestione Condominio</span>
-                    <h2>Adattabile anche per altri contesti!</h2>
-                    <p>
-                      Il progetto è un Gestionale che in questo caso gestisce Condominii,
-                      Immobili, Spese, Bilanci e tutto ciò che riguarda l'edilizia.
-                      Se hai bisogno di un gestionale personalizzato <a class="text-white" href="#contact">Contattaci!</a>
-                    </p>
-                    <!-- <a href="javascript:void(0)" class="ud-main-btn">Informazioni</a> -->
+                <div class="ipad-pro-portrait">
+                  <div class="bezel"></div>
+                  <div class="casing"></div>
+                  <div class="camera"></div>
+                  <div class="home-btn"></div>
+                  <div class="screen"></div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="ud-about-content-wrapper">
+                    <div class="ud-about-content">
+                      <span class="tag">Gestione Condominio</span>
+                      <h2 class=>Adattabile anche per altri contesti!</h2>
+                      <p class=>
+                        Il progetto è un Gestionale che in questo caso gestisce Condominii,
+                        Immobili, Spese, Bilanci e tutto ciò che riguarda l'edilizia.
+                        Se hai bisogno di un gestionale personalizzato <a class="text-white" href="#contact">Contattaci!</a>
+                      </p>
+                      <!-- <a href="javascript:void(0)" class="ud-main-btn">Informazioni</a> -->
+                    </div>
                   </div>
-              </div>
-            </div>
+                </div>
               </div>
               <div class="carousel-item">
               <div class="ipad-pro-portrait">
@@ -796,12 +824,6 @@
     </footer>
     <!-- ====== Footer End ====== -->
 
-    <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
-    <!-- ====== Back To Top End ====== -->
-
     <!-- ====== All Javascript Files ====== -->
     <script type="text/javascript" src="assets/js/particles.js"></script> 
     <script type="text/javascript" src="assets/js/particles.min.js"></script>
@@ -811,7 +833,6 @@
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
     
       // Your web app's Firebase configuration
@@ -833,48 +854,5 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      // ==== for menu scroll
-      const pageLink = document.querySelectorAll(".ud-menu-scroll");
-
-      pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
-          });
-        });
-      });
-
-      // section menu active
-      function onScroll(event) {
-        const sections = document.querySelectorAll(".ud-menu-scroll");
-        const scrollPos =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop;
-
-        for (let i = 0; i < sections.length; i++) {
-          const currLink = sections[i];
-          const val = currLink.getAttribute("href");
-          const refElement = document.querySelector(val);
-          const scrollTopMinus = scrollPos + 73;
-          if (
-            refElement.offsetTop <= scrollTopMinus &&
-            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-          ) {
-            document
-              .querySelector(".ud-menu-scroll")
-              .classList.remove("active");
-            currLink.classList.add("active");
-          } else {
-            currLink.classList.remove("active");
-          }
-        }
-      }
-
-      window.document.addEventListener("scroll", onScroll);
-    </script>
   </body>
 </html>
