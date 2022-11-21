@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: exifly.it
+  deploy:
+    runs-on: nginx
 
     steps:
     - uses: actions/checkout@v3
