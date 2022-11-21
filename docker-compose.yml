@@ -1,9 +1,9 @@
 version: '3.3'
 services:
   exifly.it:
-    image: nginx
+    image: nginx:latest
     restart: always
     ports:
-      - 9443:443
+      - 443:80
     volumes:
-      - ./exifly.it:/var/www/html
+      - .:/usr/share/nginx/html
